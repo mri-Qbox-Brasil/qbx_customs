@@ -21,7 +21,7 @@ local function checkAccess()
         local playerJob = QBX.PlayerData.job.name
         for i = 1, #zone.job do
             if playerJob == zone.job[i] then
-                hasJob = true
+                hasJob = QBX.PlayerData.job.onduty
                 break
             end
         end
@@ -51,6 +51,7 @@ end
 CreateThread(function()
     for _, v in ipairs(sharedConfig.zones) do
         lib.zones.poly({
+            debug = sharedConfig.debug,
             points = v.points,
             onEnter = function(s)
                 zoneId = s.id

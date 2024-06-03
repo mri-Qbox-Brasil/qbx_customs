@@ -1,4 +1,5 @@
 return {
+    debug = false,
     -- If you experience issues with your zones not working, please ensure the Z value of your vec3 points match. Using different heights may cause problems.
     ---@type ZoneOptions[]
     zones = {
