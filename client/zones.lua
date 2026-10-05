@@ -115,8 +115,3 @@ lib.onCache('vehicle', function(vehicle)
     end
     checkAccess()
 end)
-
-lib.callback.register('mri_Qbox:customs:client', function()
-    lib.hideTextUI()
-    openCustoms()
-end)
